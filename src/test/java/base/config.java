@@ -8,7 +8,7 @@ import org.openqa.selenium.safari.SafariOptions;
 
 import java.time.Duration;
 
-public class config {
+public class config extends testData {
     public static WebDriver driver;
 
     public static WebDriver setupBrowser (String driverType){
@@ -22,7 +22,7 @@ public class config {
             driver = new SafariDriver(options);
         }
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(1000));
         return driver;
     }
 }
